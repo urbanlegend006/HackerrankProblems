@@ -16,12 +16,8 @@ public class IOStream {
                 System.out.write(data);
                 System.out.flush();
             }
-
-
-
-
         }catch (IOException e){
-            System.out.printf("e");
+            System.out.print(e);
         }
 
     }

@@ -32,6 +32,17 @@ public class FIleIO {
             ips.close();
             bufIsStream.close();
 
+            System.out.println("******************************");
+            FileInputStream fis = new FileInputStream("hello.txt");
+            byte[] dataStreamFis = fis.readAllBytes();
+            FileOutputStream fos = new FileOutputStream(new File("new_hello.txt"));
+            fos.write(dataStreamFis);
+            fos.flush();
+            fos.close();
+            fis.close();
+
+
+
         }catch (IOException e){
             System.out.println(e);
         }
